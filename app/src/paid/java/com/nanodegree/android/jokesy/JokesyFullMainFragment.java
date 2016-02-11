@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by locker on 2/6/2016.
- */
 public class JokesyFullMainFragment extends Fragment {
 
     private TextView mBuildVarTextView;
