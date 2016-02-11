@@ -1,0 +1,43 @@
+/* 
+1. 	command: gradlew.bat -b testendpoint.gradle appengineStart
+2. 	appengine {
+ 
+		httpAddress = "0.0.0.0"
+		daemon = true
+	}
+
+3. 	gradle.properties: org.gradle.daemon=true
+*/
+
+task appengineStart(type:Exec)
+task testserver(type:Exec)
+task appengineStop(type:Exec)
+
+appengineStart.doFirst{
+		println 'start end point'
+		commandLine 'cmd', '/c', 'gradlew.bat appengineRun'
+	}
+
+appengineStart.doLast{
+	testserver.execute()
+	}	
+
+testserver.doFirst{
+		println 'run tests'
+		commandLine 'cmd', '/c', 'gradlew.bat connectAndroidTest'
+	}
+	
+testserver.doLast{
+		appengineStop.execute()
+	}	
+
+appengineStop.doFirst{
+	println 'stop end point'
+	commandLine 'cmd', '/c', 'gradlew.bat appengineStop'
+	}
+	
+appengineStop.doLast{
+		println 'done running script'
+	}
+	
+	
