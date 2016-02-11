@@ -1,12 +1,12 @@
 /* 
-1. 	command: gradlew.bat -b testendpoint.gradle appengineStart
+1. 	gradle.properties: org.gradle.daemon=true
 2. 	appengine {
  
 		httpAddress = "0.0.0.0"
 		daemon = true
 	}
 
-3. 	gradle.properties: org.gradle.daemon=true
+3. 	command: gradlew.bat -b testendpoint.gradle appengineStart
 */
 
 task appengineStart(type:Exec)
