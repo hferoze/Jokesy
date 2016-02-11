@@ -12,9 +12,6 @@ import com.nanodegree.android.jokesy.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-/**
- * Created by locker on 2/6/2016.
- */
 public class FetchJokeAsyncTask  extends AsyncTask<String, Void, String> {
     private static MyApi myApiService = null;
     private static final String LOCAL_DEV_SERVER_IP = "192.168.2.7";
