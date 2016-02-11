@@ -10,9 +10,6 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-/**
- * Created by locker on 2/6/2016.
- */
 public class JokesyMainFragment extends Fragment {
 
     private TextView mBuildVarTextView;
